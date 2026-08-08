@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+
+config.local.php
+conexao.local.php
+
+Thumbs.db
+Desktop.ini
+
+.vscode/
+.idea/
+
+*.log
+
+*.tmp
+*.temp
