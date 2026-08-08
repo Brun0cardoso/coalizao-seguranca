@@ -1,0 +1,230 @@
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    width: 100%;
+
+    height: 90px;
+
+    /* Mantém o cabeçalho visível ao rolar, mas reserva sua altura no layout.
+       Assim, o banner começa abaixo dele em vez de ficar ao fundo. */
+    position: sticky;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    transition: 0.3s ease;
+
+}
+
+
+/* =====================================================
+   HEADER AO ROLAR
+===================================================== */
+
+.header.scrolled {
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.header-container {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    flex-shrink: 0;
+
+}
+
+.logo img {
+
+    /* O arquivo do logotipo é quadrado; mantê-lo dentro da altura do header
+       impede que ele avance sobre o conteúdo da página. */
+    width: 82px;
+
+    height: auto;
+
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.menu ul li a {
+
+    position: relative;
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+
+    color: var(--azul);
+
+    padding: 10px 0;
+
+    transition: color 0.3s ease;
+
+}
+
+
+/* Linha dourada */
+
+.menu ul li a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--dourado);
+
+    transition: width 0.3s ease;
+
+}
+
+.menu ul li a:hover {
+
+    color: var(--dourado);
+
+}
+
+.menu ul li a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   BOTÃO ORÇAMENTO
+===================================================== */
+
+.btn-orcamento {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    background: var(--dourado);
+
+    color: var(--branco);
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+
+}
+
+.btn-orcamento:hover {
+
+    transform: translateY(-2px);
+
+    background: #b8860b;
+
+    box-shadow: 0 8px 20px rgba(212, 160, 23, 0.25);
+
+}
+
+
+/* =====================================================
+   BOTÃO MENU MOBILE
+===================================================== */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    padding: 8px;
+
+}
+
+
+/* Barras */
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 28px;
+
+    height: 3px;
+
+    margin: 5px auto;
+
+    background: var(--azul);
+
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+
+}

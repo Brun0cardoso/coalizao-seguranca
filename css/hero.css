@@ -1,0 +1,129 @@
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:calc(100vh - 90px);
+
+    padding:70px 0;
+
+    display:flex;
+
+    align-items:center;
+
+    background-image:url("../assets/images/banner.png");
+
+    /* Preserva toda a altura da foto (incluindo cabeça e pés). */
+    background-size:auto 100%;
+
+    background-position:right center;
+
+    background-repeat:no-repeat;
+
+    background-color:var(--azul-escuro);
+
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(5,28,51,.72);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-text{
+
+    max-width:650px;
+
+    color:white;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:30px;
+
+    margin-bottom:20px;
+
+    font-size:.9rem;
+
+}
+
+.hero h1{
+
+    font-family:var(--fonte-titulo);
+
+    font-size:3rem;
+
+    line-height:1.15;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:1.05rem;
+
+    margin-bottom:28px;
+
+    color:#f1f1f1;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-secundario{
+
+    padding:14px 30px;
+
+    border:2px solid white;
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.btn-secundario:hover{
+
+    background:white;
+
+    color:var(--azul);
+
+}

@@ -1,0 +1,132 @@
+/* =====================================================
+   IMPORTAÇÃO DOS ARQUIVOS CSS
+===================================================== */
+
+@import url("header.css");
+@import url("hero.css");
+@import url("sections.css");
+@import url("footer.css");
+@import url("animations.css");
+@import url("responsive.css");
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =====================================================
+   VARIÁVEIS DO PROJETO
+===================================================== */
+
+:root{
+
+    --azul:#082B4E;
+    --azul-escuro:#051C33;
+    --dourado:#D4A017;
+    --branco:#FFFFFF;
+    --cinza:#F5F7FA;
+    --texto:#444444;
+
+    --fonte-titulo:'Poppins',sans-serif;
+    --fonte-texto:'Open Sans',sans-serif;
+
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body{
+
+    font-family:var(--fonte-texto);
+
+    background:var(--branco);
+
+    color:var(--texto);
+
+    line-height:1.6;
+
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* =====================================================
+   LISTAS
+===================================================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* =====================================================
+   IMAGENS
+===================================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* =====================================================
+   BOTÃO PADRÃO
+===================================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    background:var(--dourado);
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+.btn:hover{
+
+    background:#b8860b;
+
+    transform:translateY(-3px);
+
+}
