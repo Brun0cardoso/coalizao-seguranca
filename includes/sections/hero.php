@@ -23,11 +23,11 @@
 
             <div class="hero-buttons">
 
-                <a href="contato.php" class="btn">
+                <a href="index.php#contato" class="btn">
                     Solicitar Orçamento
                 </a>
 
-                <a href="servicos.php" class="btn-secundario">
+                <a href="index.php#servicos" class="btn-secundario">
                     Conheça nossos Serviços
                 </a>
 

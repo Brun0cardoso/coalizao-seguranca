@@ -157,3 +157,206 @@
     }
 
 }
+
+/* =====================================================
+   SECTION — QUEM SOMOS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .quem-somos {
+        padding: 65px 0;
+    }
+
+    .quem-somos-conteudo {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .quem-somos-texto {
+        max-width: 100%;
+    }
+
+    .quem-somos-texto .section-title {
+        font-size: 1.9rem;
+    }
+
+    .quem-somos-imagem img {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+
+/* =====================================================
+   SECTION — SERVIÇOS
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .servicos {
+        padding: 70px 0;
+    }
+
+    .servicos-header {
+        margin-bottom: 40px;
+    }
+
+    .servicos-header .section-title {
+        font-size: 1.9rem;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servico-card {
+        min-height: auto;
+        padding: 30px 25px;
+    }
+
+}
+
+/* =====================================================
+   SECTION — DIFERENCIAIS
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .diferenciais-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .diferenciais {
+        padding: 70px 0;
+    }
+
+    .diferenciais-header {
+        margin-bottom: 40px;
+    }
+
+    .diferenciais-header .section-title {
+        font-size: 1.9rem;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .diferencial-card {
+        min-height: auto;
+        padding: 30px 25px;
+    }
+
+}
+
+/* =====================================================
+   SECTION — SEGMENTOS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .segmentos {
+        padding: 70px 0;
+    }
+
+    .segmentos-header {
+        margin-bottom: 40px;
+    }
+
+    .segmentos-header .section-title {
+        font-size: 1.9rem;
+    }
+
+    .segmentos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .segmento-card,
+    .segmento-conteudo {
+        min-height: 330px;
+    }
+
+    .segmento-conteudo {
+        padding: 28px;
+    }
+
+}
+
+/* =====================================================
+   SECTION — TRABALHE CONOSCO
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .trabalhe-conosco {
+        padding: 70px 0;
+    }
+
+    .trabalhe-conosco-conteudo {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .trabalhe-conosco-texto .section-title {
+        font-size: 1.9rem;
+    }
+
+    .trabalhe-destaque-item {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+}
+
+/* =====================================================
+   SECTION — CONTATO
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .contato {
+        padding: 70px 0;
+    }
+
+    .contato-header {
+        margin-bottom: 40px;
+    }
+
+    .contato-header .section-title {
+        font-size: 1.9rem;
+    }
+
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contato-formulario {
+        padding: 28px 22px;
+    }
+
+    .contato-formulario .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}

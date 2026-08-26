@@ -7,19 +7,27 @@
         </li>
 
         <li>
-            <a href="sobre.php">Quem Somos</a>
+            <a href="index.php#quem-somos">Quem Somos</a>
         </li>
 
         <li>
-            <a href="servicos.php">Serviços</a>
+            <a href="index.php#servicos">Serviços</a>
         </li>
 
         <li>
-            <a href="trabalhe-conosco.php">Trabalhe Conosco</a>
+            <a href="index.php#diferenciais">Diferenciais</a>
         </li>
 
         <li>
-            <a href="contato.php">Contato</a>
+            <a href="index.php#segmentos">Segmentos</a>
+        </li>
+
+        <li>
+            <a href="index.php#trabalhe-conosco">Trabalhe Conosco</a>
+        </li>
+
+        <li>
+            <a href="index.php#contato">Contato</a>
         </li>
 
     </ul>

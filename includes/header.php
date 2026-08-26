@@ -9,25 +9,22 @@
 
     <meta
         name="description"
-        content="Coalizão Segurança - Soluções profissionais em segurança patrimonial, portaria, controle de acesso e monitoramento."
-    >
+        content="Coalizão Segurança - Soluções profissionais em segurança patrimonial, portaria, controle de acesso e monitoramento.">
 
     <title>Coalizão Segurança</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/imagens/logo/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/style.css">
@@ -36,56 +33,53 @@
 
 <body>
 
-<header class="header" id="header">
+    <header class="header" id="header">
 
-    <div class="container header-container">
+        <div class="container header-container">
 
-        <!-- LOGO -->
+            <!-- LOGO -->
 
-        <div class="logo">
+            <div class="logo">
 
-            <a href="index.php">
+                <a href="index.php">
 
-                <img
-                    src="assets/images/logo.png"
-                    alt="Coalizão Segurança"
-                >
+                    <img
+                        src="assets/images/logo.png"
+                        alt="Coalizão Segurança">
 
+                </a>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <?php include 'menu.php'; ?>
+
+
+            <!-- BOTÃO ORÇAMENTO -->
+
+            <a
+                href="index.php#contato"
+                class="btn-orcamento">
+                Solicitar Orçamento
             </a>
+
+
+            <!-- BOTÃO MENU MOBILE -->
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Abrir menu"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
 
         </div>
 
-
-        <!-- MENU -->
-
-        <?php include 'menu.php'; ?>
-
-
-        <!-- BOTÃO ORÇAMENTO -->
-
-        <a
-            href="contato.php"
-            class="btn-orcamento"
-        >
-            Solicitar Orçamento
-        </a>
-
-
-        <!-- BOTÃO MENU MOBILE -->
-
-        <button
-            class="menu-toggle"
-            id="menu-toggle"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
-
-</header>
+    </header>

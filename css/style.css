@@ -130,3 +130,11 @@ img{
     transform:translateY(-3px);
 
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 105px;
+}
