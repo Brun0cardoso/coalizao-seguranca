@@ -1,6 +1,6 @@
             </main>
         </div>
     </div>
-    <script src="assets/admin.js"></script>
+    <script src="<?= htmlspecialchars($adminJsUrl, ENT_QUOTES, 'UTF-8') ?>"></script>
 </body>
 </html>

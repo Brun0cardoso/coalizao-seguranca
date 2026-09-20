@@ -110,8 +110,49 @@ CREATE TABLE IF NOT EXISTS quotes (
         ON UPDATE CASCADE ON DELETE SET NULL
 ) ENGINE=InnoDB;
 
+CREATE TABLE IF NOT EXISTS contracts (
+    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    client_id BIGINT UNSIGNED NULL,
+    post_id BIGINT UNSIGNED NULL,
+    contract_number VARCHAR(50) NOT NULL,
+    title VARCHAR(180) NOT NULL,
+    service_type ENUM('security', 'concierge', 'monitoring', 'access_control', 'other') NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NULL,
+    renewal_date DATE NULL,
+    monthly_value DECIMAL(12,2) NOT NULL DEFAULT 0.00,
+    status ENUM('active', 'pending', 'expiring', 'expired', 'renewed', 'cancelled') NOT NULL DEFAULT 'active',
+    notes TEXT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    UNIQUE KEY uq_contracts_number (contract_number),
+    KEY idx_contracts_client (client_id),
+    KEY idx_contracts_post (post_id),
+    KEY idx_contracts_status (status),
+    KEY idx_contracts_dates (start_date, end_date),
+    CONSTRAINT fk_contracts_client FOREIGN KEY (client_id) REFERENCES clients (id)
+        ON UPDATE CASCADE ON DELETE SET NULL,
+    CONSTRAINT fk_contracts_post FOREIGN KEY (post_id) REFERENCES service_posts (id)
+        ON UPDATE CASCADE ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS contract_history (
+    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    contract_id BIGINT UNSIGNED NOT NULL,
+    action VARCHAR(80) NOT NULL,
+    details VARCHAR(255) NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    KEY idx_contract_history_contract (contract_id),
+    KEY idx_contract_history_created_at (created_at),
+    CONSTRAINT fk_contract_history_contract FOREIGN KEY (contract_id) REFERENCES contracts (id)
+        ON UPDATE CASCADE ON DELETE CASCADE
+) ENGINE=InnoDB;
+
 CREATE TABLE IF NOT EXISTS financial_entries (
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    contract_id BIGINT UNSIGNED NULL,
     client_id BIGINT UNSIGNED NULL,
     description VARCHAR(255) NOT NULL,
     category VARCHAR(100) NOT NULL,
@@ -124,8 +165,11 @@ CREATE TABLE IF NOT EXISTS financial_entries (
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
+    UNIQUE KEY uq_financial_entries_contract (contract_id),
     KEY idx_financial_entries_due_date (due_date),
     KEY idx_financial_entries_type_status (type, status),
+    CONSTRAINT fk_financial_entries_contract FOREIGN KEY (contract_id) REFERENCES contracts (id)
+        ON UPDATE CASCADE ON DELETE SET NULL,
     CONSTRAINT fk_financial_entries_client FOREIGN KEY (client_id) REFERENCES clients (id)
         ON UPDATE CASCADE ON DELETE SET NULL
 ) ENGINE=InnoDB;
